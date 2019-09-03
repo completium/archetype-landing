@@ -62,7 +62,7 @@ div#scene_banner {position: absolute !important;top: 0;left: 0;right: 0;bottom: 
 .service_title_part{ max-width: 550px;}
 .service_list{  margin:34px auto 0px;-webkit-perspective: 1200px;-moz-perspective: 1200px;-ms-perspective: 1200px;perspective: 1200px; overflow: hidden;}
 .service_item{max-width:1150px; margin: auto; position: relative;}
-.service_image{ position: absolute; left: 0px; top: 0;animation:MoveUpDown 2s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;transform-style: preserve-3d;}
+.service_image{ position: absolute; left: 0px; top: 0;transform-style: preserve-3d;}
 .justify-content-start .service_image{left: auto; right: 0;}
 .service_row{ padding: 68px 0px 50px;}
 .service_info{ max-width: 760px;}
