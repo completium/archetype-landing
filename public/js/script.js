@@ -24,13 +24,21 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.footer_navigation .nav-link').on('click',function(){
+	$('.footer_navigation .nav-link , .mobile_navigation .nav-link').on('click',function(){
 		var _this = $(this);
 		var _thisTarget = _this.attr('href');
 		if(_thisTarget != 'javascript:;' && _thisTarget != '#' && $(_thisTarget).length){
-			var _thisOffset = $(_thisTarget).offset().top;
-			$('body,html').animate({'scrollTop':_thisOffset+'px'});
-		}		
+			if($('#nav-icon2').hasClass('open')){
+				$('#nav-icon2').removeClass('open');
+				$('.navigation_view').fadeOut('fast',function(){
+					var _thisOffset = $(_thisTarget).offset().top;
+					$('body,html').animate({'scrollTop':_thisOffset+'px'});
+				});
+			}else{
+				var _thisOffset = $(_thisTarget).offset().top;
+				$('body,html').animate({'scrollTop':_thisOffset+'px'});
+			}
+		}
 		return false;
 	});
 });
