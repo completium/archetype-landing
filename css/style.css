@@ -42,6 +42,7 @@ p{ font-size: 21px; line-height: 38px; color: #797979;font-family: 'Open Sans', 
 .nav_toggle.open span:nth-child(5) {left: 3px;top: 10px;}
 .nav_toggle.open span:nth-child(6) {left: calc(50% - 3px);top: 10px;}
 .nav_toggle.open span{ background: #333} 
+.mobile_navigation{ display: none;}
 /*nav section [end]*/
 /*banner section [start]*/
 .banner{ background: url('../images/banner.png') no-repeat center bottom 120px;  padding:204px 0px 257px; overflow: hidden; position: relative;-webkit-perspective: 1200px;-moz-perspective: 1200px;-ms-perspective: 1200px;perspective: 1200px; overflow: hidden;background-size: 100%;}
@@ -62,7 +63,8 @@ div#scene_banner {position: absolute !important;top: 0;left: 0;right: 0;bottom: 
 .service_title_part{ max-width: 550px;}
 .service_list{  margin:34px auto 0px;-webkit-perspective: 1200px;-moz-perspective: 1200px;-ms-perspective: 1200px;perspective: 1200px; overflow: hidden;}
 .service_item{max-width:1150px; margin: auto; position: relative;}
-.service_image{ position: absolute; left: 0px; top: 0;transform-style: preserve-3d;}
+.service_item .d-flex{ position: relative;}
+.service_image{ position: absolute; left: 0px; top: 0;}
 .justify-content-start .service_image{left: auto; right: 0;}
 .service_row{ padding: 68px 0px 50px;}
 .service_info{ max-width: 760px;}
@@ -136,6 +138,7 @@ div#scene_banner {position: absolute !important;top: 0;left: 0;right: 0;bottom: 
 .footer_bottom p span{ margin-left:13px; }
 .footer_layout{ position: relative !important;}
 /*footer section [End]*/
+
 
 /*Large devices (desktops, less than 1640px)*/
 /*@media screen and (max-width:1640px){
@@ -232,15 +235,20 @@ p{ font-size: 16px; line-height: 28px;}
 .navbar-light .navbar-toggler{ z-index: 1;}
 .nav_toggle{ display: block;}
 .navigation_view{position: fixed;top: 0;bottom: 0;width: 100%;padding: 0; background: #fff; left: 0;}
-.nav{justify-content: center;align-items: center;position: absolute;top: 0;bottom: 0;left: 0;right: 0; flex-direction: column}
+.nav{justify-content: center;align-items: center;flex-direction: column}
 .nav li{ display: block;}
 .nav .nav-link{ color: #54544A;line-height: 30px;font-size: 20px; margin: 5px 0px;}
 .nav-link.git_icon_white i{ background: url(../images/github_black_icon.svg) no-repeat 0 center;}
 .nav-link.git_icon_white {padding-left: 25px;}
+.mobile_navigation{ display: flex;}
+.navigation_innner{position: absolute;top: 0;bottom: 0;left: 0;right: 0;justify-content: center;align-items: center;flex-direction: column; display: flex; }    
 .banner {background-size: 100% 400px;background-position: center top;padding: 170px 0px 20px;}
 .banner_right_part {right: -190px;top: 160px;}
 .banner_info h1{ max-width: 70%;}
 .banner_info p{ color: #FF7600; font-size: 20px; line-height: 22px;    margin-top: 180px;max-width: 70%;}
+.mobile_navigation ul{padding: 0px;margin: 0;text-align: center;padding-left: 0;margin-bottom: 0;list-style: none;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;justify-content: center;align-items: center;flex-direction: column;}
+.mobile_navigation li{ display: block;}
+.mobile_navigation .nav-link{ color: #54544A;line-height: 30px;font-size: 20px; margin: 5px 0px;opacity: 0.75;font-family: 'Open Sans', sans-serif;font-weight: 600;position: relative;padding-bottom: 4px;transition: 0.3s 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);    line-height: 30px;font-size: 20px; }
 /*service [start]*/
 .service_info {max-width: 450px;}
 .service_image{ max-width: 255px;}
@@ -355,5 +363,8 @@ p{ font-size: 14px; line-height: 21px;}
 }
 /*Small devices (landscape phones, 374px down)*/
 @media screen and (max-width:374px){
-.banner_info h1 {max-width: 70%;}
+.banner_info h1 {max-width: 70%;font-size: 20px;line-height: 26px;}
+.banner_info p {font-size: 15px;line-height: 22px;margin-top: 150px;max-width: 75%;}
+
 }
+
