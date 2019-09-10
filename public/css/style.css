@@ -20,7 +20,7 @@ p{ font-size: 21px; line-height: 38px; color: #797979;font-family: 'Open Sans', 
 .nav-link{ line-height: 30px; font-size: 18px; color: #fff; opacity: 0.75; font-family: 'Open Sans', sans-serif; font-weight: 600; padding: 0px; margin: 0px 25px; position: relative; padding-bottom: 4px; transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);}
 .nav-link:after{ position: absolute; left: 0px; bottom: 0px; background: #FF7600; content: '';  width: 0px; height: 3px;transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);}
 .nav-link:hover{ color: #fff;opacity: 1;}
-.nav-link:hover:after{ width: 30px;} 
+.nav-link:hover:after{ width: 30px;}
 .nav-link.git_icon_white { padding-left: 39px; position: relative;}
 .nav-link.git_icon_white:after{ left: 39px;}
 .nav-link.git_icon_white i{ position: absolute; left: 0px; top: 0%; background: url(../images/github_white_icon.svg) no-repeat 0 0; width: 32px; height: 30px; display: inline-block;    vertical-align: middle;}
@@ -41,7 +41,7 @@ p{ font-size: 21px; line-height: 38px; color: #797979;font-family: 'Open Sans', 
 .nav_toggle.open span:nth-child(4) {left: 100%;opacity: 0;}
 .nav_toggle.open span:nth-child(5) {left: 3px;top: 10px;}
 .nav_toggle.open span:nth-child(6) {left: calc(50% - 3px);top: 10px;}
-.nav_toggle.open span{ background: #333} 
+.nav_toggle.open span{ background: #333}
 .mobile_navigation{ display: none;}
 /*nav section [end]*/
 /*banner section [start]*/
@@ -199,7 +199,7 @@ p{ font-size: 20px; line-height: 36px;}
 .title {font-size: 40px;line-height: 64px;}
 .sub_heading {font-size: 40px;line-height: 64px;}
 p{ font-size: 18px; line-height: 32px;}
-/*nav and banner [start]*/    
+/*nav and banner [start]*/
 .banner {padding: 170px 0px 185px;}
 .banner_image {max-width: 640px;}
 .banner_info h1 {font-size:50px; line-height: 50px;    margin-bottom:20px;}
@@ -241,7 +241,7 @@ p{ font-size: 16px; line-height: 28px;}
 .nav-link.git_icon_white i{ background: url(../images/github_black_icon.svg) no-repeat 0 center;}
 .nav-link.git_icon_white {padding-left: 25px;}
 .mobile_navigation{ display: flex;}
-.navigation_innner{position: absolute;top: 0;bottom: 0;left: 0;right: 0;justify-content: center;align-items: center;flex-direction: column; display: flex; }    
+.navigation_innner{position: absolute;top: 0;bottom: 0;left: 0;right: 0;justify-content: center;align-items: center;flex-direction: column; display: flex; }
 .banner {background-size: 100% 400px;background-position: center top;padding: 170px 0px 20px;}
 .banner_right_part {right: -190px;top: 160px;}
 .banner_info h1{ max-width: 70%;}

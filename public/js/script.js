@@ -11,32 +11,32 @@ var parallaxInstance = new Parallax(scene1);
 var scene2 = document.getElementById('scene_footer');
 var parallax = new Parallax(scene2);
 
-$(document).ready(function(){
+$(document).ready(function () {
 	/*navigation toggle function for mobile*/
-	$('#nav-icon2').click(function(){
+	$('#nav-icon2').click(function () {
 		var _this = $(this);
-		if(_this.hasClass('open')){
+		if (_this.hasClass('open')) {
 			_this.removeClass('open')
 			$('.navigation_view').fadeOut();
-		}else{
+		} else {
 			$('.navigation_view').fadeIn();
 			_this.addClass('open')
 		}
 	});
 
-	$('.footer_navigation .nav-link , .mobile_navigation .nav-link').on('click',function(){
+	$('.footer_navigation .nav-link , .mobile_navigation .nav-link').on('click', function () {
 		var _this = $(this);
 		var _thisTarget = _this.attr('href');
-		if(_thisTarget != 'javascript:;' && _thisTarget != '#' && $(_thisTarget).length){
-			if($('#nav-icon2').hasClass('open')){
+		if (_thisTarget != 'javascript:;' && _thisTarget != '#' && $(_thisTarget).length) {
+			if ($('#nav-icon2').hasClass('open')) {
 				$('#nav-icon2').removeClass('open');
-				$('.navigation_view').fadeOut('fast',function(){
+				$('.navigation_view').fadeOut('fast', function () {
 					var _thisOffset = $(_thisTarget).offset().top;
-					$('body,html').animate({'scrollTop':_thisOffset+'px'});
+					$('body,html').animate({ 'scrollTop': _thisOffset + 'px' });
 				});
-			}else{
+			} else {
 				var _thisOffset = $(_thisTarget).offset().top;
-				$('body,html').animate({'scrollTop':_thisOffset+'px'});
+				$('body,html').animate({ 'scrollTop': _thisOffset + 'px' });
 			}
 		}
 		return false;
