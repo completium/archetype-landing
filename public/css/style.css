@@ -24,6 +24,9 @@ p{ font-size: 21px; line-height: 38px; color: #797979;font-family: 'Open Sans', 
 .nav-link.git_icon_white { padding-left: 39px; position: relative;}
 .nav-link.git_icon_white:after{ left: 39px;}
 .nav-link.git_icon_white i{ position: absolute; left: 0px; top: 0%; background: url(../images/github_white_icon.svg) no-repeat 0 0; width: 32px; height: 30px; display: inline-block;    vertical-align: middle;}
+.nav-link.twitter_icon_white { padding-left: 39px; position: relative;}
+.nav-link.twitter_icon_white:after{ left: 39px;}
+.nav-link.twitter_icon_white i{ position: absolute; left: 0px; top: 0%; background: url(../images/twitter_white_icon.svg) no-repeat 0 0; width: 32px; height: 30px; display: inline-block;    vertical-align: middle;}
 .navigation_view{ justify-content: center; padding-right: 130px;}
 .navbar.absolute-top{ padding-bottom: 10px; padding-top: 45px;}
 .nav_toggle{width: 23px;height: 18px;position: absolute;right: 30px;top: 50%; margin-top: -2px; transform: rotate(0deg);transition: .5s ease-in-out;    z-index: 1;cursor: pointer; display: none;}
@@ -133,6 +136,8 @@ div#scene_banner {position: absolute !important;top: 0;left: 0;right: 0;bottom: 
 .founded_column span{ display: block; min-height: 54px;}
 .git_icon_button{ padding-left: 63px; position: relative;}
 .git_icon_button i { display: block; position: absolute; left: 25px; top: 0px; bottom: 0px; width: 32px; background: url(../images/github_white_icon.svg) no-repeat 0 center;}
+.twitter_icon_button{ padding-left: 63px; position: relative;}
+.twitter_icon_button i { display: block; position: absolute; left: 25px; top: 0px; bottom: 0px; width: 32px; background: url(../images/twitter_white_icon.svg) no-repeat 0 center;}
 .footer_bottom{ padding: 30px 0px 23px;}
 .footer_bottom p{ font-size: 12px;font-family: 'Open Sans', sans-serif; font-weight: 400; margin: 0px; line-height: 20px;}
 .footer_bottom p span{ margin-left:13px; }
@@ -319,6 +324,8 @@ p{ font-size: 16px; line-height: 24px;}
 .footer_buttons .orange-buttons-pills{ min-width: 146px; font-size: 13px;}
 .git_icon_button i{ width: 18px; background-size: contain; left: 15px;}
 .git_icon_button {padding-left: 30px;}
+.twitter_icon_button i{ width: 18px; background-size: contain; left: 15px;}
+.twitter_icon_button {padding-left: 30px;}
 .footer_logo{ max-width: 160px;}
 .footer_logo img{ width: 100%; height: auto;}
 }
