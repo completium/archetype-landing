@@ -26,7 +26,7 @@ p{ font-size: 21px; line-height: 38px; color: #797979;font-family: 'Open Sans', 
 .nav-link.git_icon_white i{ position: absolute; left: 0px; top: 0%; background: url(../images/github_white_icon.svg) no-repeat 0 0; width: 32px; height: 30px; display: inline-block;    vertical-align: middle;}
 .nav-link.twitter_icon_white { padding-left: 39px; position: relative;}
 .nav-link.twitter_icon_white:after{ left: 39px;}
-.nav-link.twitter_icon_white i{ position: absolute; left: 0px; top: 0%; background: url(../images/twitter_white_icon.svg) no-repeat 0 0; width: 32px; height: 30px; display: inline-block;    vertical-align: middle;}
+.nav-link.twitter_icon_white i{ position: absolute; left: -18px; top: -18%; background: url(../images/twitter_white_icon.svg) no-repeat 0 0; width: 69px; height: 46px; display: inline-block;    vertical-align: middle;}
 .navigation_view{ justify-content: center; padding-right: 130px;}
 .navbar.absolute-top{ padding-bottom: 10px; padding-top: 45px;}
 .nav_toggle{width: 23px;height: 18px;position: absolute;right: 30px;top: 50%; margin-top: -2px; transform: rotate(0deg);transition: .5s ease-in-out;    z-index: 1;cursor: pointer; display: none;}
