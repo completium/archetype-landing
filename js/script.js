@@ -24,7 +24,8 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.footer_navigation .nav-link , .mobile_navigation .nav-link').on('click', function () {
+//	$('.footer_navigation .nav-link , .mobile_navigation .nav-link').on('click', function () {
+	$('.nav-link').on('click', function () {
 		var _this = $(this);
 		var _thisTarget = _this.attr('href');
 		if (_thisTarget != 'javascript:;' && _thisTarget != '#' && $(_thisTarget).length) {
