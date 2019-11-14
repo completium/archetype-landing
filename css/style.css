@@ -97,6 +97,7 @@ div#scene_banner {position: absolute !important;top: 0;left: 0;right: 0;bottom: 
 .testinomial_sidebar_row:last-child{ margin-bottom: 0px;}
 .testinomial_sidebar_row p{font-weight: 400;font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 22px;}
 .testinomial_sidebar_row h4{ padding-left: 30px;font-family: 'Montserrat', sans-serif;font-weight: 600; font-size: 19px; color: #54544A; margin-bottom: 10px; text-transform: uppercase}
+.testinomial_wrapper {top: -350px}
 .doc_title{ background: url(../images/book_black_icon.svg) no-repeat 0 0;}
 .git_title{ background: url(../images/github_black_icon.svg) no-repeat 0 0;}
 /*language section [end]*/
@@ -264,6 +265,7 @@ p{ font-size: 16px; line-height: 28px;}
 .testinomial_sidebar {border-left:none;border-top: 2px solid #E8E8E8;padding: 30px 0px 16px 0px;}
 .testinomial_author {margin: 19px 0px 20px;}
 .testinomial_section {padding-right: 0px;margin-bottom: 40px;}
+.testinomial_wrapper {top: 0px}
 .language_section_column {margin-top: 25px;}
 .language_section {padding: 40px 0px 50px;}
 /*vs_code [start]*/
