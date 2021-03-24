@@ -25,11 +25,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/aos.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/prism.css" rel="stylesheet" />
 
 </head>
 
 <body>
     <!--header [start]-->
+    <script src="prism.js"></script>
     <header>
         <div class="layout">
             <div class="container-fluid">
@@ -52,7 +54,7 @@
                             <div class="mobile_navigation">
                                 <ul>
                                     <li><a href="#service" class="nav-link">Services</a></li>
-                                    <li><a href="#language" class="nav-link">Language</a></li>
+                                    <li><a href="#language" class="nav-link">Papers</a></li>
                                     <li><a href="#vs_code" class="nav-link">Extension VS Code</a></li>
                                     <li><a href="#community" class="nav-link">Community</a></li>
                                     <li><a href="javascript:;" class="nav-link">Contact</a></li>
@@ -61,7 +63,7 @@
                             <ul class="nav">
                                 <li class="nav-item">
                                     <a class="nav-link"
-                                        href="#language">Language</a>
+                                        href="#language">Papers</a>
                                 </li>
                                 <li class="nav-item">
                                     <a target="_blank" class="nav-link"
@@ -131,7 +133,9 @@
         <!--service section [start]-->
         <div class="service_section" id="service">
 
+
             <div class="service_list">
+
                 <div class="service_row">
                     <div class="layout">
                         <div class="container-fluid">
@@ -140,13 +144,185 @@
                                     <div class="d-flex justify-content-end">
                                         <div class="flex-md-column">
                                             <div class="service_info">
-                                                <h3 class="sub_heading" data-aos="fade-left">Formal verification</h3>
                                                 <div class="service_image" data-aos="fade-right">
+                                                    <img src="images/execution_icon@2x.png" style="position: relative; top:40px">
+                                                </div>
+                                                <h3 class="sub_heading" data-aos="fade-left">Business logic</h3>
+                                                    <pre><code class="language-archetype">archetype business_logic_demo(holder : address, value : tez, deadline: date)
+
+entry pay () {
+  transfer ((1 + 7% * (now - deadline) / 1d) * value) to holder
+}</code></pre>
+
+                                                <p data-aos="fade-left">The <i>pay</i> entrypoint applies a penalty fee of 7% per day beyond
+                                                <i>deadline</i>. Archetype language provides exlcusive types to easily implement readable business rules: rationals, dates, durations ... </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="service_row">
+                    <div class="layout">
+                        <div class="container-fluid">
+                            <div class="service_item">
+                                <div class="col-sm-12">
+                                    <div class="d-flex justify-content-start">
+                                        <div class="flex-md-column">
+                                            <div class="service_info">
+                                                <h3 class="sub_heading" data-aos="fade-right">Execution Conditions</h3>
+                                                <div class="service_image" data-aos="fade-left">
+                                                    <img src="images/verify_icon@2x.png" style="position: relative; top:100px">
+                                                </div>
+                                                <p data-aos="fade-right">
+                                                    <pre><code class="language-archetype">archetype exec_cond_demo(admin : address, value : nat)
+
+entry setvalue (v : nat) {
+  called by admin
+  require {
+      r1: transferred > value;
+      r2: now &lt 2022-01-01;
+  }
+  effect {
+      value := v;
+  }
+}</code></pre>
+                                                <p data-aos="fade-left">
+                                                    The <i>setvalue</i> entrypoint executes if the sender is the <i>admin</i>, if the transferred amount is greater than <i>value</i> and if it is called before 2022. Archetype provides specific syntax to establish executions conditions so that the contract is easy to read and check.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service_row">
+                    <div class="layout">
+                        <div class="container-fluid">
+                            <div class="service_item">
+                                <div class="col-sm-12">
+                                    <div class="d-flex justify-content-end">
+                                        <div class="flex-md-column">
+                                            <div class="service_info">
+                                                <div class="service_image" data-aos="fade-right">
+                                                    <img src="images/verify_icon@2x.png" style="position: relative; top:80px">
+                                                </div>
+                                                <h3 class="sub_heading" data-aos="fade-left">Sate Machine</h3>
+                                                    <pre><code class="language-archetype">archetype state_machine_demo(value : tez, holder : address)
+
+states =
+| Created initial
+| Intialized
+| Terminated
+
+transition initialize () {
+  from Created to Intialized
+  when { transferred &gt value }
+}
+
+transition terminate () {
+    from Initialized Terminated
+    effect { transfer balance to holder }
+}
+</code></pre>
+
+                                                <p data-aos="fade-left">It is possible with Archetype to design the contract as a state machine. Transitions may have guard conditions (like <i>initialize</i>) and effect on the storage (like <i>terminate</i>). State machines are convenient to make the overall process clear and transparent.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="service_row">
+                    <div class="layout">
+                        <div class="container-fluid">
+                            <div class="service_item">
+                                <div class="col-sm-12">
+                                    <div class="d-flex justify-content-start">
+                                        <div class="flex-md-column">
+                                            <div class="service_info">
+                                                <h3 class="sub_heading" data-aos="fade-right">Asset Collection</h3>
+                                                <div class="service_image" data-aos="fade-left">
+                                                    <img src="images/execution_icon@2x.png" style="position: relative; top:100px">
+                                                </div>
+                                                <p data-aos="fade-right">
+                                                    <pre><code class="language-archetype">archetype asset_demo
+
+asset vehicle {
+  vin          : string;
+  nprepairs    : nat  = 0;
+  dateofrepair : date = now;
+}
+
+entry repair_oldest () {
+  for v in vehicle.sort(dateofrepair).select(the.nbrepairs = 0).head(3) do
+    vehicle.update(v, { nbrepairs += 1; dateofrepair = now })
+  done
+}</code></pre>
+                                                <p data-aos="fade-left">
+                                                    The <i>repair_oldest</i> entrypoint increments the <i>nbrepairs</i> field of the 3 vehicles with oldest date of repair, and with a number of repairs above zero. An asset collections provides a <b>rich API</b> to read/write data (add, remove, update, addupdate, ...), and scan the collection (select, sort, sum, head, tail, ...).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service_row">
+                    <div class="layout">
+                        <div class="container-fluid">
+                            <div class="service_item">
+                                <div class="col-sm-12">
+                                    <div class="d-flex justify-content-end">
+                                        <div class="flex-md-column">
+                                            <div class="service_info">
+                                                <div class="service_image" data-aos="fade-right">
+                                                    <img src="images/execution_icon@2x.png" style="position: relative; top:40px">
+                                                </div>
+                                                <h3 class="sub_heading" data-aos="fade-left">Specification</h3>
+                                                    <pre><code class="language-archetype">
+specification entry repair_oldest () {
+  postcondition p1 {
+      0 &lt= vehicle.sum(nbrepairs) - before.vehicle.sum(nbrepairs) &lt= 3
+  }
+}</code></pre>
+
+                                                <p data-aos="fade-left">The postcondition <i>p1</i> of <i>repair_oldest</i> entry point specifies that the difference between the total number of repairs after the entry point's execution and before, is less or equal to 3. Archetype provides a full-featured specification language for contract invariants and entry point postconditions. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="service_row">
+                    <div class="layout">
+                        <div class="container-fluid">
+                            <div class="service_item">
+                                <div class="col-sm-12">
+                                    <div class="d-flex justify-content-start">
+                                        <div class="flex-md-column">
+                                            <div class="service_info">
+                                                <h3 class="sub_heading" data-aos="fade-right">Formal Verification</h3>
+                                                <div class="service_image" data-aos="fade-left">
                                                     <img src="images/verify_icon@2x.png">
                                                 </div>
-                                                <p data-aos="fade-left">Archetype language provides a predefined set of
-                                                    security properties, and enables specifying contract properties with
-                                                    logic formula. Archetype transcodes these properties to the
+                                                <p data-aos="fade-left">Archetype transcodes the specification to the
                                                     <a target="_blank" href="http://why3.lri.fr">Why3</a> format (whyml) and Why3 generates
                                                     proof obligations to be solved by automatic (Alt-ergo, CVC, Z3, ...) or
                                                     manual provers (Coq, ...).</p>
@@ -157,9 +333,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="service_row">
+
+               <!-- <div class="service_row">
                     <div class="layout">
                         <div class="container-fluid">
                             <div class="service_item">
@@ -188,7 +364,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <!--service section [End]-->
@@ -198,7 +374,7 @@
                 <div class="container-fluid">
                     <div class="d-flex flex-wrap">
                         <div class="col-sm-12">
-                            <h2 class="title">Language</h2>
+                            <h2 class="title">Papers</h2>
                             <p class="subtitle">Security by high-level expressiveness and simplicity.</p>
                         </div>
                     </div>
