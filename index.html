@@ -184,15 +184,15 @@ entry pay () {
 entry setvalue (v : nat) {
   called by admin
   require {
-      r1: transferred > value;
-      r2: now &lt 2022-01-01;
+    r1: transferred > value;
+    r2: now &lt 2022-01-01;
   }
   effect {
-      value := v;
+    value := v;
   }
 }</code></pre>
                                                 <p data-aos="fade-left">
-                                                    The <i>setvalue</i> entrypoint executes if the sender is the <i>admin</i>, if the transferred amount is greater than <i>value</i> and if it is called before 2022. Archetype provides specific syntax to establish executions conditions so that the contract is easy to read and check.</p>
+                                                    The <i>setvalue</i> entrypoint executes if the sender is the <i>admin</i>, if the transferred amount is greater than <i>value</i> and if it is called before 2022. Archetype provides specific syntax to establish execution conditions so that the contract is <b>easy to read</b> and check.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -227,8 +227,8 @@ transition initialize () {
 }
 
 transition terminate () {
-    from Initialized Terminated
-    effect { transfer balance to holder }
+  from Initialized Terminated
+  effect { transfer balance to holder }
 }
 </code></pre>
 
@@ -270,7 +270,7 @@ entry repair_oldest () {
   done
 }</code></pre>
                                                 <p data-aos="fade-left">
-                                                    The <i>repair_oldest</i> entrypoint increments the <i>nbrepairs</i> field of the 3 vehicles with oldest date of repair, and with a number of repairs above zero. An asset collections provides a <b>rich API</b> to read/write data (add, remove, update, addupdate, ...), and scan the collection (select, sort, sum, head, tail, ...).</p>
+                                                    The <i>repair_oldest</i> entrypoint increments the <i>nbrepairs</i> field of the 3 vehicles with oldest date of repair, and with a number of repairs above zero. An asset collection provides a <b>rich API</b> to read/write data (add, remove, update, addupdate, ...), and to iterate over the collection (select, sort, sum, head, tail, ...).</p>
                                             </div>
                                         </div>
                                     </div>
@@ -295,7 +295,7 @@ entry repair_oldest () {
                                                     <pre><code class="language-archetype">
 specification entry repair_oldest () {
   postcondition p1 {
-      0 &lt= vehicle.sum(nbrepairs) - before.vehicle.sum(nbrepairs) &lt= 3
+    0 &lt= vehicle.sum(nbrepairs) - before.vehicle.sum(nbrepairs) &lt= 3
   }
 }</code></pre>
 

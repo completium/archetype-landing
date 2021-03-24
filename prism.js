@@ -1464,7 +1464,7 @@ Prism.languages.archetype = {
 			greedy: true
 		}
 	],
-	'number': /\b(?:0x[\da-f][\da-f_]+|(?:0[bo])?\d[\d_]*\.?[\d_]*(?:e[+-]?[\d_]+)?|1d)/i,
+	'number': /\b(?:7%|1d|0x[\da-f][\da-f_]+|(?:0[bo])?\d[\d_]*\.?[\d_]*(?:e[+-]?[\d_]+)?|1d)/i,
 	'label': {
 		pattern: /\B~\w+/,
 		alias: 'function'
