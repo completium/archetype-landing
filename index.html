@@ -147,8 +147,8 @@
                                                 <div class="service_image" data-aos="fade-right">
                                                     <img src="images/execution_icon@2x.png" style="position: relative; top:40px">
                                                 </div>
-                                                <h3 class="sub_heading" data-aos="fade-left">Business logic</h3>
-                                                    <pre><code class="language-archetype">archetype blogic_demo(holder : address, value : tez, deadline: date)
+                                                <h3 class="sub_heading" data-aos="fade-left">Easy Business logic</h3>
+                                                    <pre><code class="language-archetype">archetype blogic_demo(holder : address, value : tez, deadline : date)
 
 entry pay () {
   transfer ((1 + 7% * (now - deadline) / 1d) * value) to holder
@@ -174,7 +174,7 @@ entry pay () {
                                     <div class="d-flex justify-content-start">
                                         <div class="flex-md-column">
                                             <div class="service_info">
-                                                <h3 class="sub_heading" data-aos="fade-right">Execution Conditions</h3>
+                                                <h3 class="sub_heading" data-aos="fade-right">Explicit Execution Conditions</h3>
                                                 <div class="service_image" data-aos="fade-left">
                                                     <img src="images/verify_icon@2x.png" style="position: relative; top:100px">
                                                 </div>
@@ -213,7 +213,7 @@ entry setvalue (v : nat) {
                                                 <div class="service_image" data-aos="fade-right">
                                                     <img src="images/verify_icon@2x.png" style="position: relative; top:80px">
                                                 </div>
-                                                <h3 class="sub_heading" data-aos="fade-left">Sate Machine</h3>
+                                                <h3 class="sub_heading" data-aos="fade-left">Clear Sate Machine</h3>
                                                     <pre><code class="language-archetype">archetype state_machine_demo(value : tez, holder : address)
 
 states =
