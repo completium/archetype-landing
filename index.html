@@ -260,7 +260,7 @@ transition terminate () {
 
 asset vehicle {
   vin          : string;
-  nprepairs    : nat  = 0;
+  nbrepairs    : nat  = 0;
   dateofrepair : date = now;
 }
 
@@ -380,6 +380,25 @@ specification entry repair_oldest () {
                     </div>
                     <div class="language_section_column">
                         <div class="d-flex flex-wrap flex-column flex-sm-column flex-lg-row">
+                            <div class="col-sm-12 col-md-12 col-lg-7 col-xl-9">
+                                <div class="testinomial_section">
+                                    <h3>Nomadic Labs Research Seminars #10</h3>
+                                    <p>High-level smart contract design & verification with Archetype
+                                    </p>
+                                    <div class="testinomial_author" style="justify-content: space-between;">
+                                        <span style="display:flex;align-items:center;">
+                                            <span class="author_image"><img src="images/benoit_image.png"></span>
+                                            <p class="author_name">Benoit Rognier, CEO co-founder at Edukera.</p>
+                                        </span>
+                                        <a target="_blank"
+                                            href="https://www.youtube.com/watch?v=7oKa9mjnfZU"
+                                            class="orange-buttons-pills"><span>Watch the video</span></a>
+                                    </div>
+                                    <div class="button_outer">
+
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-sm-12 col-md-12 col-lg-7 col-xl-9">
                                 <div class="testinomial_section">
                                     <h3>Archetype, a DSL for Tezos</h3>
@@ -549,7 +568,7 @@ specification entry repair_oldest () {
                                         more</span></a>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-4">
+                        <!-- <div class="col-sm-12 col-lg-4">
                             <div class="community_block">
                                 <span class="community_logo"><img src="images/ligo_logo.svg"></span>
                                 <h6 class="community_title">Ligo</h6>
@@ -570,10 +589,10 @@ specification entry repair_oldest () {
                                 <a target="_blank" href="https://smartpy.io/" class="grey-buttons-pills"><span>Learn
                                         more</span></a>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!--</div>
                     <span class="community_spacer"></span>
-                    <div class="d-flex flex-wrap align-items-stretch justify-content-between">
+                    <div class="d-flex flex-wrap align-items-stretch justify-content-between"> -->
                         <div class="col-sm-12 col-lg-4">
                             <div class="community_block">
                                 <span class="community_logo"><img src="images/why3_logo.svg"></span>
@@ -586,7 +605,7 @@ specification entry repair_oldest () {
                                         more</span></a>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
 
                 </div>
             </div>
