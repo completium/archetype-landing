@@ -227,7 +227,7 @@ transition initialize () {
 }
 
 transition terminate () {
-  from Initialized Terminated
+  from Initialized to Terminated
   effect { transfer balance to holder }
 }
 </code></pre>
