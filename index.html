@@ -218,11 +218,11 @@ entry setvalue (v : nat) {
 
 states =
 | Created initial
-| Intialized
+| Initialized
 | Terminated
 
 transition initialize () {
-  from Created to Intialized
+  from Created to Initialized
   when { transferred &gt value }
 }
 
