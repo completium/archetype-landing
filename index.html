@@ -218,16 +218,16 @@ entry setvalue (v : nat) {
 
 states =
 | Created initial
-| Intialized
+| Initialized
 | Terminated
 
 transition initialize () {
-  from Created to Intialized
+  from Created to Initialized
   when { transferred &gt value }
 }
 
 transition terminate () {
-  from Initialized Terminated
+  from Initialized to Terminated
   effect { transfer balance to holder }
 }
 </code></pre>
